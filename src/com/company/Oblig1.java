@@ -8,7 +8,7 @@ public class  Oblig1 {
     public static void main(String[] args) {
 	// write your code here
 
-        int [] b = randPerm(5);
+        int [] b = randPerm(3);
 
         System.out.println(Arrays.toString(b));
 
@@ -52,12 +52,13 @@ public class  Oblig1 {
      */
     public static int maks(int[] a){
 
+        int n = a.length -1;
         for (int i = 1; i < a.length; i++) {
             if(a[i - 1] > a[i]){ //Sammenlign førest a[0] og a[1]
                 bytt(a, i, i - 1); // Hvis a[0] > a[1] bytter de to verdiene plass
             }
         }
-        return a[a.length -1];//Her vi det legger den størte verdi siden den settes bak
+        return a[n];//Her vi det legger den størte verdi siden den settes bak
     }
 
     /**
