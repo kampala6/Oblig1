@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.Arrays;
+import java.util.NoSuchElementException;
 import java.util.Random;
 
 public class  Oblig1 {
@@ -52,14 +53,16 @@ public class  Oblig1 {
      * @return
      */
     public static int maks(int[] a){
+        if(a.length < 2)
+            throw new NoSuchElementException("tabellen er tomt!");
 
-        int n = a.length -1;
+        int størteVerdieBarkerst = a.length -1;
         for (int i = 1; i < a.length; i++) {
             if(a[i - 1] > a[i]){ //Sammenlign førest a[0] og a[1]
                 bytt(a, i, i - 1); // Hvis a[0] > a[1] bytter de to verdiene plass
             }
         }
-        return a[n];//Her vi det legger den størte verdi siden den settes bak
+        return a[størteVerdieBarkerst];//Her vi det legger den størte verdi siden den settes bak
     }
 
     /**
@@ -81,6 +84,10 @@ public class  Oblig1 {
         }return antallOmbyttinger;
     }
 
+    /**
+     * @param a
+     * @return
+     */
     public static int antallUlikeSortert(int[] a){
         int antallUlikeSortert = 1;
         int i = 1;
