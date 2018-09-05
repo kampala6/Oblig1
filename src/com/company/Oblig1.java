@@ -83,11 +83,12 @@ public class  Oblig1 {
 
     public static int antallUlikeSortert(int[] a){
         int antallUlikeSortert = 1;
-        for (int i = 0; i < a.length; i++) {
+        int i = 1;
+        for (; i < a.length; i++) {
             if(a[i - 1] > a[i]){
                 throw new IllegalArgumentException("Tabellen er ikke sortert stigende");
             }else {
-                if(a[i - 1] == a[i]){
+                if(a[i - 1] < a[i]){
                     antallUlikeSortert++;
                 }
             }
