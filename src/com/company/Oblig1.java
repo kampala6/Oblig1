@@ -7,17 +7,18 @@ public class  Oblig1 {
 
     public static void main(String[] args) {
 	// write your code here
+        int [] b = {3,3,4,5,5,6,7,7,7,8};
+        System.out.println(antallUlikeSortert(b));
 
-        int [] b = randPerm(3);
-
-        System.out.println(Arrays.toString(b));
-
-        System.out.println(maks(b));
-
-        System.out.println(Arrays.toString(b));
-
-
-        System.out.println(ombytteringer(b));
+//        int [] b = randPerm(3);
+//
+//        System.out.println(Arrays.toString(b));
+//
+//        System.out.println(maks(b));
+//
+//        System.out.println(Arrays.toString(b));
+//
+//        System.out.println(ombytteringer(b));
 
     }
 
@@ -78,5 +79,18 @@ public class  Oblig1 {
                 antallOmbyttinger++;
             }
         }return antallOmbyttinger;
+    }
+
+    public static int antallUlikeSortert(int[] a){
+        int antallUlikeSortert = 1;
+        for (int i = 0; i < a.length; i++) {
+            if(a[i - 1] > a[i]){
+                throw new IllegalArgumentException("Tabellen er ikke sortert stigende");
+            }else {
+                if(a[i - 1] == a[i]){
+                    antallUlikeSortert++;
+                }
+            }
+        }return antallUlikeSortert;
     }
 }
