@@ -7,7 +7,7 @@ public class  Oblig1 {
 
     public static void main(String[] args) {
 	// write your code here
-        int [] b = {3,3,4,5,5,6,7,7,7,8};
+        int [] b = {3,3,4,5,5,6,7,7,7,8,9,9};
         System.out.println(antallUlikeSortert(b));
 
 //        int [] b = randPerm(3);
