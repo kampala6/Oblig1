@@ -85,6 +85,8 @@ public class  Oblig1 {
     }
 
     /**
+     * This will return the number of similar or numbers that
+     * are alike
      * @param a
      * @return
      */
@@ -100,5 +102,18 @@ public class  Oblig1 {
                 }
             }
         }return antallUlikeSortert;
+    }
+
+    public static int antallUlikeUsortert(int[] a){
+        int n = a.length;
+        for (int i = 0; i < n; i++) {
+            int likeverdie = a[i];
+            int j = 1;
+            for (; j < n; j++) {
+                if(a[i] == likeverdie)break;
+            }
+            if(j == i) return 1;
+        }
+        return 0;
     }
 }
