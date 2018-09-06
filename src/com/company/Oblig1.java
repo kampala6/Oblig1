@@ -62,21 +62,23 @@ public class  Oblig1 {
     }
 
     /**
-     *
+     *Oppgave 1
      * @param a
      * @return
      */
     public static int maks(int[] a){
-        if(a.length < 2)
+        if(a.length < 1)
             throw new NoSuchElementException("tabellen er tomt!");
 
-        int størteVerdieBarkerst = a.length -1;
+        //int størteVerdieBarkerst = a.length -1;
         for (int i = 1; i < a.length; i++) {
             if(a[i - 1] > a[i]){ //Sammenlign førest a[0] og a[1]
-                bytt(a, i, i - 1); // Hvis a[0] > a[1] bytter de to verdiene plass
+                bytt(a, i - 1, i); // Hvis a[0] > a[1] bytter de to verdiene plass
+
             }
         }
-        return a[størteVerdieBarkerst];//Her vi det legger den størte verdi siden den settes bak
+        //return a[størteVerdieBarkerst];
+        return a[a.length - 1];//Her vi det legger den størte verdi siden den settes bak
     }
 
     /**
@@ -88,7 +90,7 @@ public class  Oblig1 {
      */
     public static int ombyttinger(int[] a){
 
-        int antallOmbyttinger = 1;
+        int antallOmbyttinger = 0;
 
         for (int i = 1; i < a.length; i++) {
             if(a[i - 1] > a[i]){ //Sammenlign førest a[0] og a[1]
@@ -99,17 +101,20 @@ public class  Oblig1 {
     }
 
     /**
+     * Oppgave 2
      * This will return the number of similar or numbers that
      * are alike
      * @param a
      * @return
      */
     public static int antallUlikeSortert(int[] a){
+        if(a.length < 2) return a.length;
         int antallUlikeSortert = 1;
         int i = 1;
         for (; i < a.length; i++) {
             if(a[i - 1] > a[i]){
-                throw new IllegalArgumentException("Tabellen er ikke sortert stigende");
+                //throw new IllegalArgumentException("Tabellen er ikke sortert stigende");
+                throw  new IllegalStateException("Tabellen er ikke sortert stigende");
             }else {
                 if(a[i - 1] < a[i]){
                     antallUlikeSortert++;
@@ -118,14 +123,22 @@ public class  Oblig1 {
         }return antallUlikeSortert;
     }
 
+    /**
+     * Oppgave 3
+     * @param a
+     * @return
+     */
     public static int antallUlikeUsortert(int[] a){
+        if(a.length < 2) return a.length; // this is important for the value in test oppgave 3b
         int n = a.length;
 
         int antallULikeUsortert = 1;
-        for (int i = 0; i < n; i++) {
-            int likeverdie = a[i];
-            int j = 1;
-            for (; j < n; j++) {
+        int i = 1;
+        for (; i < n; i++) {
+
+            int j = 0;
+            for (; j < i; j++) {
+                int likeverdie = a[i];
                 if(a[j] == likeverdie)break;
             }
             if(j == i) antallULikeUsortert++;
