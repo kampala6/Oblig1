@@ -11,6 +11,12 @@ public class  Oblig1 {
         int [] b = {3,3,4,5,5,6,7,7,7,8,9,9};
         System.out.println(antallUlikeSortert(b));
 
+        char[] c = "ABCDEFGHIJ".toCharArray();
+         rotasjon(c);
+
+        System.out.println(Arrays.toString(c));
+
+
 //        int [] b = randPerm(3);
 //
 //        System.out.println(Arrays.toString(b));
@@ -128,12 +134,13 @@ public class  Oblig1 {
         int n = a.length;
         if(n < 2) return;  // tomt eller en verdi i tabellen
 
-       while (n > 1){
+       if(a.length > 1) {
            char sistChar = a[n - 1];  //siste element bokstava i tabellen
-           for (int i = n - 1; i > 0 ; i--) { // Starter fra bak siden det er den som skal bytter
-               a[i] = a[i - 1];
-           }
-           a[0] = sistChar;  // her vi sist bokstav fylt plass med den i posisjon a[0] som er A
+           for (int i = n - 1; i > 0; i--) { // Starter fra bak siden det er den som skal bytter
+                   a[i] = a[i - 1];
+               }
+               a[0] = sistChar;  // her vi sist bokstav fylt plass med den i posisjon a[0] som er A
+
        }
     }
 }
