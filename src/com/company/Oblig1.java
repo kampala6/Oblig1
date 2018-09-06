@@ -173,4 +173,68 @@ public class  Oblig1 {
             }
         }
     }
+
+    /**
+     * HjelpMethod
+     * @param a
+     * @param fra
+     * @param til
+     * @return
+     */
+    public static  int min(int[] a, int fra, int til){
+        if(fra < 0 || til > a.length || fra >= til){
+            throw new IllegalArgumentException("Illegalt interval!");
+        }
+        int m = fra;
+        int minverdi = a[fra];
+
+        for (int i = fra; i < til; i++) {
+            if(a[i] < minverdi){
+                m = i;
+                minverdi = a[m];
+            }
+        }return m;
+    }
+
+    public static int min(int[] a){
+        return min(a, 0, a.length);
+    }
+
+    public static int[] tredjeMin(int[] a){
+        int n = a.length;
+        if(n < 3){
+            throw new java.util.NoSuchElementException("a.lenght(" + n + ") < 2!");
+        }
+
+        int m = min(a); // m er posisjonen til tabellens minste verdi
+        int nm;
+
+        int tm = 0;
+
+        if(m == 0){  // den minste ligger først
+            nm = min(a, 1, n);  // leter i a[1:n>
+        }else if(m == n -1){ // den minste liger bakerst
+            nm = min(a, 0, n - 1); //leter i a[0: n -1]
+        }else{
+            int mv = min(a, 0 , m); //leter i a[0:m
+            int mh = min(a, m + 1, n); //leter i a[m+1:n>
+
+            nm = a[mh] > a[mv] ? mv : mh; // hvem er minst
+        }
+
+        if(nm < m){
+            int vnm = min(a, 0, nm);
+            int nmM = min(a, nm + 1, m);
+            int mth = min(a, m + 1, n);
+
+            if(a[vnm] < a[nmM] && a[vnm] < a[mth]){
+                tm = vnm;
+            }else if(a[nmM] < a[vnm] && a[nmM] < a[mth]){
+                tm = nmM;
+            }else if(a[mth] < a[vnm] && a[mth] < a[nmM]){
+                tm = mth;
+            }
+        }
+        return new int[]{m , nm, tm};
+    }
 }
