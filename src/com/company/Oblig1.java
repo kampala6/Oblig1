@@ -16,6 +16,9 @@ public class  Oblig1 {
 
         System.out.println(Arrays.toString(c));
 
+        rotasjon1(c);
+        System.out.println(Arrays.toString(c));
+
 
 //        int [] b = randPerm(3);
 //
@@ -83,7 +86,7 @@ public class  Oblig1 {
      * @param a
      * @return
      */
-    public static int ombytteringer(int[] a){
+    public static int ombyttinger(int[] a){
 
         int antallOmbyttinger = 1;
 
@@ -142,5 +145,19 @@ public class  Oblig1 {
                a[0] = sistChar;  // her vi sist bokstav fylt plass med den i posisjon a[0] som er A
 
        }
+    }
+
+    public static void rotasjon1(char[] a){
+        int n = a.length;
+        if(n < 2) return;  // tomt eller en verdi i tabellen
+
+        if(a.length > 1 ) {
+            for (int i = 0; i < n; i++) {
+                char temp = a[i + 1];
+                if(i != n - 1){
+                    a[i + 1] = a[i];
+                }
+            }
+        }
     }
 }
