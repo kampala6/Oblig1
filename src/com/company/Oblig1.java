@@ -29,6 +29,11 @@ public class  Oblig1 {
         a[j] = temp;
     }
 
+    public static void bytt(char[] a, int i, int j){
+        char temp = a[i];
+        a[i] = a[j];
+        a[j] = temp;
+    }
     /**
      * Method to produce random array values
      * This is to produce a given number
@@ -106,14 +111,29 @@ public class  Oblig1 {
 
     public static int antallUlikeUsortert(int[] a){
         int n = a.length;
+
+        int antallULikeUsortert = 1;
         for (int i = 0; i < n; i++) {
             int likeverdie = a[i];
             int j = 1;
             for (; j < n; j++) {
-                if(a[i] == likeverdie)break;
+                if(a[j] == likeverdie)break;
             }
-            if(j == i) return 1;
+            if(j == i) antallULikeUsortert++;
         }
-        return 0;
+        return antallULikeUsortert;
+    }
+
+    public static void rotasjon(char[] a){
+        int n = a.length;
+        if(n < 2) return;  // tomt eller en verdi i tabellen
+
+       while (n > 1){
+           char sistChar = a[n - 1];  //siste element bokstava i tabellen
+           for (int i = n - 1; i > 0 ; i--) { // Starter fra bak siden det er den som skal bytter
+               a[i] = a[i - 1];
+           }
+           a[0] = sistChar;  // her vi sist bokstav fylt plass med den i posisjon a[0] som er A
+       }
     }
 }
