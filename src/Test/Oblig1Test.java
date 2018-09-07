@@ -28,10 +28,10 @@ public class Oblig1Test {
         antallFeil += oppgave3();
         //antallFeil += oppgave4();
         antallFeil += oppgave5();
-        //antallFeil += oppgave6();
+        antallFeil += oppgave6();
         //antallFeil += oppgave7();
         //antallFeil += oppgave8();
-        antallFeil += oppgave9();
+       // antallFeil += oppgave9();
         //antallFeil += oppgave10();
 
         if (antallFeil == 0) {
@@ -389,117 +389,117 @@ public class Oblig1Test {
     }
 //
 //    ///// Oppgave 6 //////////////////////////////////////
-//
-//    public static int oppgave6() {
-//        int antallFeil = 0;
-//
-//        char[] a = {};
-//
-//        try {
-//            Oblig1.rotasjon(a, 1);  // kaller metoden
-//        } catch (Exception e) {
-//            System.out.println(e);
-//            System.out.println
-//                    ("Oppgave 6: a) Skal ikke kaste unntak for en tom tabell!!");
-//            antallFeil++;
-//        }
-//
-//        char[] b = {'A'};
-//        char[] b0 = {'A'};
-//        Oblig1.rotasjon(b, 0);
-//        if (!Arrays.equals(b, b0)) {
-//            System.out.println("Oppgave 6: b) Feil hvis tabellen har ett element!");
-//            antallFeil++;
-//        }
-//
-//        Oblig1.rotasjon(b, 1);
-//        if (!Arrays.equals(b, b0)) {
-//            System.out.println("Oppgave 6: c) Feil hvis tabellen har ett element!");
-//            antallFeil++;
-//        }
-//
-//        Oblig1.rotasjon(b, -1);
-//        if (!Arrays.equals(b, b0)) {
-//            System.out.println("Oppgave 6: d) Feil hvis tabellen har ett element!");
-//            antallFeil++;
-//        }
-//
-//        char[] c = {'A', 'B'};
-//        char[] c0 = {'B', 'A'};
-//        Oblig1.rotasjon(c, 1);
-//
-//        if (!Arrays.equals(c, c0)) {
-//            System.out.println("Oppgave 6: e) Feil hvis tabellen har to elementer!");
-//            antallFeil++;
-//        }
-//
-//        c = new char[]{'A', 'B'};
-//
-//        Oblig1.rotasjon(c, -1);
-//        if (!Arrays.equals(c, c0)) {
-//            System.out.println("Oppgave 6: f) Feil hvis tabellen har to elementer!");
-//            antallFeil++;
-//        }
-//
-//        char[] d = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'};
-//        char[] d0 = {'G', 'H', 'I', 'J', 'A', 'B', 'C', 'D', 'E', 'F'};
-//
-//        Oblig1.rotasjon(d, 4);
-//        if (!Arrays.equals(d, d0)) {
-//            System.out.println("Oppgave 6: g) Feil hvis tabellen har flere elementer!");
-//            antallFeil++;
-//        }
-//
-//        d = new char[]{'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'};
-//        Oblig1.rotasjon(d, -6);
-//        if (!Arrays.equals(d, d0)) {
-//            System.out.println("Oppgave 6: h) Feil hvis tabellen har flere elementer!");
-//            antallFeil++;
-//        }
-//
-//        char[] x = new char[100_000];
-//        long tid = System.currentTimeMillis();
-//        Oblig1.rotasjon(x, 99_999);
-//        tid = System.currentTimeMillis() - tid;
-//
-//        if (tid > 20) {
-//            System.out.println("Oppgave 6: i) Metoden "
-//                    + "er for ineffektiv. Må forbedres!");
-//            antallFeil++;
-//        }
-//
-//        tid = System.currentTimeMillis();
-//        Oblig1.rotasjon(x, 199_999);
-//        tid = System.currentTimeMillis() - tid;
-//
-//        if (tid > 20) {
-//            System.out.println("Oppgave 6: j) Metoden "
-//                    + "er for ineffektiv. Må forbedres!");
-//            antallFeil++;
-//        }
-//
-//        tid = System.currentTimeMillis();
-//        Oblig1.rotasjon(x, 50_000);
-//        tid = System.currentTimeMillis() - tid;
-//
-//        if (tid > 20) {
-//            System.out.println("Oppgave 6: k) Metoden "
-//                    + "er for ineffektiv. Må forbedres!");
-//            antallFeil++;
-//        }
-//
-//        tid = System.currentTimeMillis();
-//        Oblig1.rotasjon(x, -40_000);
-//        tid = System.currentTimeMillis() - tid;
-//
-//        if (tid > 20) {
-//            System.out.println("Oppgave 6: l) Metoden "
-//                    + "er for ineffektiv. Må forbedres!");
-//            antallFeil++;
-//        }
-//
-//        return antallFeil;
-//    }
+
+    public static int oppgave6() {
+        int antallFeil = 0;
+
+        char[] a = {};
+
+        try {
+            Oblig1.rotasjon(a, 1);  // kaller metoden
+        } catch (Exception e) {
+            System.out.println(e);
+            System.out.println
+                    ("Oppgave 6: a) Skal ikke kaste unntak for en tom tabell!!");
+            antallFeil++;
+        }
+
+        char[] b = {'A'};
+        char[] b0 = {'A'};
+        Oblig1.rotasjon(b, 0);
+        if (!Arrays.equals(b, b0)) {
+            System.out.println("Oppgave 6: b) Feil hvis tabellen har ett element!");
+            antallFeil++;
+        }
+
+        Oblig1.rotasjon(b, 1);
+        if (!Arrays.equals(b, b0)) {
+            System.out.println("Oppgave 6: c) Feil hvis tabellen har ett element!");
+            antallFeil++;
+        }
+
+        Oblig1.rotasjon(b, -1);
+        if (!Arrays.equals(b, b0)) {
+            System.out.println("Oppgave 6: d) Feil hvis tabellen har ett element!");
+            antallFeil++;
+        }
+
+        char[] c = {'A', 'B'};
+        char[] c0 = {'B', 'A'};
+        Oblig1.rotasjon(c, 1);
+
+        if (!Arrays.equals(c, c0)) {
+            System.out.println("Oppgave 6: e) Feil hvis tabellen har to elementer!");
+            antallFeil++;
+        }
+
+        c = new char[]{'A', 'B'};
+
+        Oblig1.rotasjon(c, -1);
+        if (!Arrays.equals(c, c0)) {
+            System.out.println("Oppgave 6: f) Feil hvis tabellen har to elementer!");
+            antallFeil++;
+        }
+
+        char[] d = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'};
+        char[] d0 = {'G', 'H', 'I', 'J', 'A', 'B', 'C', 'D', 'E', 'F'};
+
+        Oblig1.rotasjon(d, 4);
+        if (!Arrays.equals(d, d0)) {
+            System.out.println("Oppgave 6: g) Feil hvis tabellen har flere elementer!");
+            antallFeil++;
+        }
+
+        d = new char[]{'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'};
+        Oblig1.rotasjon(d, -6);
+        if (!Arrays.equals(d, d0)) {
+            System.out.println("Oppgave 6: h) Feil hvis tabellen har flere elementer!");
+            antallFeil++;
+        }
+
+        char[] x = new char[100_000];
+        long tid = System.currentTimeMillis();
+        Oblig1.rotasjon(x, 99_999);
+        tid = System.currentTimeMillis() - tid;
+
+        if (tid > 20) {
+            System.out.println("Oppgave 6: i) Metoden "
+                    + "er for ineffektiv. Må forbedres!");
+            antallFeil++;
+        }
+
+        tid = System.currentTimeMillis();
+        Oblig1.rotasjon(x, 199_999);
+        tid = System.currentTimeMillis() - tid;
+
+        if (tid > 20) {
+            System.out.println("Oppgave 6: j) Metoden "
+                    + "er for ineffektiv. Må forbedres!");
+            antallFeil++;
+        }
+
+        tid = System.currentTimeMillis();
+        Oblig1.rotasjon(x, 50_000);
+        tid = System.currentTimeMillis() - tid;
+
+        if (tid > 20) {
+            System.out.println("Oppgave 6: k) Metoden "
+                    + "er for ineffektiv. Må forbedres!");
+            antallFeil++;
+        }
+
+        tid = System.currentTimeMillis();
+        Oblig1.rotasjon(x, -40_000);
+        tid = System.currentTimeMillis() - tid;
+
+        if (tid > 20) {
+            System.out.println("Oppgave 6: l) Metoden "
+                    + "er for ineffektiv. Må forbedres!");
+            antallFeil++;
+        }
+
+        return antallFeil;
+    }
 //
 //    ///// Oppgave 7 //////////////////////////////////////
 //
@@ -732,94 +732,94 @@ public class Oblig1Test {
 //
 //    ///// Oppgave 9 //////////////////////////////////////
 //
-    public static int oppgave9() {
-        int antallFeil = 0;
-
-        boolean unntak = false;
-        int[] test = {1, 2};
-        try {
-            Oblig1.tredjeMin(test);  // kaller metoden
-        } catch (Exception e) {
-            unntak = true;
-            if (!(e instanceof NoSuchElementException)) {
-                System.out.println("Opgave 9: a) Feil unntak!");
-                antallFeil++;
-            }
-        }
-
-        if (!unntak) {
-            System.out.println
-                    ("Opgave 9: b) Det skal kastes unntak for tabeller med for få verdier!");
-            antallFeil++;
-        }
-
-        int[] tabell = new int[]{1, 2, 3};
-        boolean flere1 = true;
-
-        while (flere1) {
-            int[] c = Oblig1.tredjeMin(tabell);
-
-            if (tabell[c[0]] != 1 || tabell[c[1]] != 2 || tabell[c[2]] != 3) {
-                System.out.println("Oppgave 9: c) Feil for " + Arrays.toString(tabell));
-                antallFeil++;
-                break;
-            }
-            flere1 = nestePermutasjon(tabell);
-        }
-
-        int[] b = randPerm(10);
-        int[] d = Oblig1.tredjeMin(b);
-
-        if (b[d[0]] != 1 || b[d[1]] != 2 || b[d[2]] != 3) {
-            System.out.println("Oppgave 9: d) Feil for " + Arrays.toString(b));
-            antallFeil++;
-        }
-
-        int[] x = {6, 3, 9, 1, 10, 5, 2, 8, 4, 7};
-        int[] y = x.clone();
-        Oblig1.tredjeMin(x);
-
-        if (!Arrays.equals(x, y)) {
-            System.out.println
-                    ("Oppgave 9: e) Metoden gjør endringer i tabellen!");
-            System.out.println("Tabellen før: " + Arrays.toString(y));
-            System.out.println("Tabellen etter: " + Arrays.toString(x));
-            antallFeil++;
-        }
-
-        int[] a = {1, 2, 3, 4, 5, 6};
-        boolean flere2 = true;
-
-        while (flere2) {
-            int[] c = Oblig1.tredjeMin(a);
-
-            int m = c[0];
-            int nm = c[1];
-            int tm = c[2];
-
-            if (a[m] != 1 || a[nm] != 2 || a[tm] != 3) {
-                System.out.println("Oppgave 9: f) Feil for " + Arrays.toString(a));
-                antallFeil++;
-                break;
-            }
-
-            flere2 = nestePermutasjon(a);
-        }
-
-        a = randPerm(100_000);
-        long tid = System.currentTimeMillis();
-        Oblig1.tredjeMin(a);
-        tid = System.currentTimeMillis() - tid;
-
-
-        if (tid > 100) {
-            System.out.println("Oppgave 9: g) Metoden er ineffektiv! Bruker du");
-            System.out.println("metoden indekssortering på hele tabellen?");
-            antallFeil++;
-        }
-
-        return antallFeil;
-    }
+//    public static int oppgave9() {
+//        int antallFeil = 0;
+//
+//        boolean unntak = false;
+//        int[] test = {1, 2};
+//        try {
+//            Oblig1.tredjeMin(test);  // kaller metoden
+//        } catch (Exception e) {
+//            unntak = true;
+//            if (!(e instanceof NoSuchElementException)) {
+//                System.out.println("Opgave 9: a) Feil unntak!");
+//                antallFeil++;
+//            }
+//        }
+//
+//        if (!unntak) {
+//            System.out.println
+//                    ("Opgave 9: b) Det skal kastes unntak for tabeller med for få verdier!");
+//            antallFeil++;
+//        }
+//
+//        int[] tabell = new int[]{1, 2, 3};
+//        boolean flere1 = true;
+//
+//        while (flere1) {
+//            int[] c = Oblig1.tredjeMin(tabell);
+//
+//            if (tabell[c[0]] != 1 || tabell[c[1]] != 2 || tabell[c[2]] != 3) {
+//                System.out.println("Oppgave 9: c) Feil for " + Arrays.toString(tabell));
+//                antallFeil++;
+//                break;
+//            }
+//            flere1 = nestePermutasjon(tabell);
+//        }
+//
+//        int[] b = randPerm(10);
+//        int[] d = Oblig1.tredjeMin(b);
+//
+//        if (b[d[0]] != 1 || b[d[1]] != 2 || b[d[2]] != 3) {
+//            System.out.println("Oppgave 9: d) Feil for " + Arrays.toString(b));
+//            antallFeil++;
+//        }
+//
+//        int[] x = {6, 3, 9, 1, 10, 5, 2, 8, 4, 7};
+//        int[] y = x.clone();
+//        Oblig1.tredjeMin(x);
+//
+//        if (!Arrays.equals(x, y)) {
+//            System.out.println
+//                    ("Oppgave 9: e) Metoden gjør endringer i tabellen!");
+//            System.out.println("Tabellen før: " + Arrays.toString(y));
+//            System.out.println("Tabellen etter: " + Arrays.toString(x));
+//            antallFeil++;
+//        }
+//
+//        int[] a = {1, 2, 3, 4, 5, 6};
+//        boolean flere2 = true;
+//
+//        while (flere2) {
+//            int[] c = Oblig1.tredjeMin(a);
+//
+//            int m = c[0];
+//            int nm = c[1];
+//            int tm = c[2];
+//
+//            if (a[m] != 1 || a[nm] != 2 || a[tm] != 3) {
+//                System.out.println("Oppgave 9: f) Feil for " + Arrays.toString(a));
+//                antallFeil++;
+//                break;
+//            }
+//
+//            flere2 = nestePermutasjon(a);
+//        }
+//
+//        a = randPerm(100_000);
+//        long tid = System.currentTimeMillis();
+//        Oblig1.tredjeMin(a);
+//        tid = System.currentTimeMillis() - tid;
+//
+//
+//        if (tid > 100) {
+//            System.out.println("Oppgave 9: g) Metoden er ineffektiv! Bruker du");
+//            System.out.println("metoden indekssortering på hele tabellen?");
+//            antallFeil++;
+//        }
+//
+//        return antallFeil;
+//    }
 //
 //    ///// Oppgave 10 //////////////////////////////////////
 //

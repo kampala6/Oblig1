@@ -62,6 +62,20 @@ public class  Oblig1 {
     }
 
     /**
+     * HejperMethoder
+     * @param a
+     * @param v
+     * @param h
+     */
+    public static void snu(char[] a, int v, int h)  // snur intervallet a[v:h]
+    {
+        while (v < h)
+            bytt(a, v++, h--);
+    }
+
+
+
+    /**
      *Oppgave 1
      * @param a
      * @return
@@ -172,6 +186,28 @@ public class  Oblig1 {
                 }
             }
         }
+    }
+
+    /**
+     * Vi skall prøve å dele tabellen i to
+     * A = (n - k), b = (k)
+     * Reverse A(r) and B(r)
+     * Reverse A(r)B(r)=(A(r)B(r))
+     * Reverse
+     * @param a
+     * @param k
+     */
+    public static void rotasjon(char[] a, int k){
+        int n = a.length;
+        if( n <= 1) return;
+        k %= n;   // k < a.length
+
+        if(k < 0) k += n;  // Vi bruke k som indeks
+
+        snu(a, 0 ,n - 1);
+        snu(a, 0, k - 1);
+        snu(a,  k, n -1);
+
     }
 
     /**
