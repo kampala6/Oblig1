@@ -1,5 +1,7 @@
 package com.company;
 
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
+
 import java.util.Arrays;
 import java.util.NoSuchElementException;
 import java.util.Random;
@@ -8,27 +10,44 @@ public class  Oblig1 {
 
     public static void main(String[] args) {
 	// write your code here
-        int [] b = {3,3,4,5,5,6,7,7,7,8,9,9};
-        System.out.println(antallUlikeSortert(b));
+        int [] b1 = {3,3,4,5,5,6,7,7,7,8,9,9};
+        System.out.println(antallUlikeSortert(b1));
 
         char[] c = "ABCDEFGHIJ".toCharArray();
          rotasjon(c);
 
         System.out.println(Arrays.toString(c));
 
-        rotasjon1(c);
-        System.out.println(Arrays.toString(c));
+//        rotasjon1(c);
+//        System.out.println(Arrays.toString(c));
+
+        char[] a = {'A','B','C','D','E','F','G','H','I','J'};
+
+        System.out.println(Arrays.toString(a));
+
+        rotasjon(a,3);
+        System.out.println(Arrays.toString(a));
+
+        rotasjon(a,-2);
+        System.out.println(Arrays.toString(a));
 
 
-//        int [] b = randPerm(3);
-//
-//        System.out.println(Arrays.toString(b));
-//
-//        System.out.println(maks(b));
-//
-//        System.out.println(Arrays.toString(b));
-//
-//        System.out.println(ombytteringer(b));
+        String a1 = flett("ABC", "DEFGH");
+
+        String b2 = flett("IJKLMN", "OPQ");
+
+        System.out.println(a1 + " " + b2);
+
+
+        int [] b = randPerm(3);
+
+        System.out.println(Arrays.toString(b));
+
+        System.out.println(maks(b));
+
+        System.out.println(Arrays.toString(b));
+
+        System.out.println(ombyttinger(b));
 
     }
 
@@ -73,8 +92,6 @@ public class  Oblig1 {
             bytt(a, v++, h--);
     }
 
-
-
     /**
      *Oppgave 1
      * @param a
@@ -88,7 +105,6 @@ public class  Oblig1 {
         for (int i = 1; i < a.length; i++) {
             if(a[i - 1] > a[i]){ //Sammenlign førest a[0] og a[1]
                 bytt(a, i - 1, i); // Hvis a[0] > a[1] bytter de to verdiene plass
-
             }
         }
         //return a[størteVerdieBarkerst];
@@ -103,15 +119,17 @@ public class  Oblig1 {
      * @return
      */
     public static int ombyttinger(int[] a){
-
         int antallOmbyttinger = 0;
 
-        for (int i = 1; i < a.length; i++) {
+        int i = 1;
+        while (i < a.length) {
             if(a[i - 1] > a[i]){ //Sammenlign førest a[0] og a[1]
                 bytt(a, i, i - 1); // Hvis a[0] > a[1] bytter de to verdiene plass
                 antallOmbyttinger++;
             }
-        }return antallOmbyttinger;
+            i++;
+        }
+        return antallOmbyttinger;
     }
 
     /**
@@ -160,6 +178,10 @@ public class  Oblig1 {
         return antallULikeUsortert;
     }
 
+    /**
+     * Oppgave 5
+     * @param a
+     */
     public static void rotasjon(char[] a){
         int n = a.length;
         if(n < 2) return;  // tomt eller en verdi i tabellen
@@ -174,21 +196,22 @@ public class  Oblig1 {
        }
     }
 
-    public static void rotasjon1(char[] a){
-        int n = a.length;
-        if(n < 2) return;  // tomt eller en verdi i tabellen
-
-        if(a.length > 1 ) {
-            for (int i = 0; i < n; i++) {
-                char temp = a[i + 1];
-                if(i != n - 1){
-                    a[i + 1] = a[i];
-                }
-            }
-        }
-    }
+//    public static void rotasjon1(char[] a){
+//        int n = a.length;
+//        if(n < 2) return;  // tomt eller en verdi i tabellen
+//
+//        if(a.length > 1 ) {
+//            for (int i = 0; i < n; i++) {
+//                char temp = a[i + 1];
+//                if(i != n - 1){
+//                    a[i + 1] = a[i];
+//                }
+//            }
+//        }
+//    }
 
     /**
+     * Oppgave 6
      * Vi skall prøve å dele tabellen i to
      * A = (n - k), b = (k)
      * Reverse A(r) and B(r)
@@ -208,6 +231,50 @@ public class  Oblig1 {
         snu(a, 0, k - 1);
         snu(a,  k, n -1);
 
+    }
+
+    /**
+     * Oppgvae 7
+     * @param s
+     * @param t
+     * @return
+     */
+    public static String flett(String s, String t){
+       StringBuilder txt = new StringBuilder(s.length() + t.length());// bygger textten og beholder lengden uten å forrander det
+
+       int i = 0;
+       while (i != (s.length() + t.length())){
+           if(i < s.length()){
+               txt.append(s.charAt(i));
+           }
+           if(i < t.length()){
+               txt.append(t.charAt(i));
+           }i++;
+       }return txt.toString();
+
+    }//end fleet2
+
+
+    /**
+     * Oppgave 7b
+     * @param s
+     * @return
+     */
+    public static String flett(String... s){
+        int textlengde = 0;
+        for(String item : s){
+            textlengde += item.length();
+        }
+
+        StringBuilder txt = new StringBuilder(textlengde);
+        int i = 0;
+        while (txt.length() != textlengde){
+            for(String item : s){
+                if(item.length() > i){
+                    txt.append(item.charAt(i));
+                }
+            }i++;
+        }return txt.toString();
     }
 
     /**
@@ -272,5 +339,44 @@ public class  Oblig1 {
             }
         }
         return new int[]{m , nm, tm};
+    }
+
+    public static boolean inneholdt(String a, String b){
+        int[] antallA = new int[29];
+        int[] antallB = new int[29];
+
+        int i = 0;
+        while (i < a.length()) {
+            char c = a.charAt(i);
+            if( c <= 'Z') antallA[c - 65]++;
+            else if(c == 'Ø') antallA[27]++;
+            else if(c == 'Æ'){
+                antallA[28]++;
+            }else {
+                antallA[26]++;
+            }
+            i++;
+        }
+
+        int j = 0;
+        while (j < b.length()) {
+            char bInnholdt = b.charAt(j);
+            if(bInnholdt <= 'Z') antallB[bInnholdt - 65]++;
+            else if (bInnholdt == 'Ø'){
+                antallB[27]++;
+            }else if(bInnholdt == 'Æ'){
+                antallB[28]++;
+            }else {
+                antallB[26]++;
+            }
+            j++;
+        }
+
+        for (int xdx = 0; xdx < 29; xdx++) {
+            if(antallA[xdx] > antallB[xdx]){
+                return false;
+            }
+        }
+        return true;
     }
 }

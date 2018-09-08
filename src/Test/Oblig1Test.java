@@ -29,10 +29,10 @@ public class Oblig1Test {
         //antallFeil += oppgave4();
         antallFeil += oppgave5();
         antallFeil += oppgave6();
-        //antallFeil += oppgave7();
+        antallFeil += oppgave7();
         //antallFeil += oppgave8();
        // antallFeil += oppgave9();
-        //antallFeil += oppgave10();
+        antallFeil += oppgave10();
 
         if (antallFeil == 0) {
             System.out.println("Gratulerer!! Du passerte testen!");
@@ -502,130 +502,130 @@ public class Oblig1Test {
     }
 //
 //    ///// Oppgave 7 //////////////////////////////////////
-//
-//    public static int oppgave7() {
-//        int antallFeil = 0;
-//        String s = null;
-//
-//        try {
-//            s = Oblig1.flett("", "");  // kaller metoden
-//        } catch (Exception e) {
-//            System.out.println(e);
-//            System.out.println
-//                    ("Oppgave 7a: a) Skal ikke kaste unntak for to tomme tegnstrenger!!");
-//            antallFeil++;
-//        }
-//
-//        if (s.compareTo("") != 0) {
-//            System.out.println
-//                    ("Oppgave 7a: b) Svaret skal bli lik en tom streng!");
-//            antallFeil++;
-//        }
-//
-//        try {
-//            s = Oblig1.flett("", "AB");  // kaller metoden
-//        } catch (Exception e) {
-//            System.out.println(e);
-//            System.out.println
-//                    ("Oppgave 7a: c) Skal ikke kaste unntak for en tom tegnstreng!!");
-//            antallFeil++;
-//        }
-//
-//        if (s.compareTo("AB") != 0) {
-//            System.out.println
-//                    ("Oppgave 7a: d) Svaret skal bli lik AB");
-//            antallFeil++;
-//        }
-//
-//        try {
-//            s = Oblig1.flett("AB", "");  // kaller metoden
-//        } catch (Exception e) {
-//            System.out.println(e);
-//            System.out.println
-//                    ("Oppgave 7a: e) Skal ikke kaste unntak for en tom tegnstreng!!");
-//            antallFeil++;
-//        }
-//
-//        if (s.compareTo("AB") != 0) {
-//            System.out.println
-//                    ("Oppgave 7a: f) Svaret skal bli lik AB");
-//            antallFeil++;
-//        }
-//
-//        s = Oblig1.flett("A", "BCDEF");
-//
-//        if (s.compareTo("ABCDEF") != 0) {
-//            System.out.println
-//                    ("Oppgave 7a: g) Svaret skal bli lik ABCDEF");
-//            antallFeil++;
-//        }
-//
-//        s = Oblig1.flett("ABCDE", "F");
-//
-//        if (s.compareTo("AFBCDE") != 0) {
-//            System.out.println
-//                    ("Oppgave 7a: h) Svaret skal bli lik AFBCDE");
-//            antallFeil++;
-//        }
-//
-//        s = Oblig1.flett("ACEGIK", "BDFHJLMN");
-//
-//        if (s.compareTo("ABCDEFGHIJKLMN") != 0) {
-//            System.out.println
-//                    ("Oppgave 7a: i) Svaret skal bli lik ABCDEFGHIJKLMN");
-//            antallFeil++;
-//        }
-//
-//        String[] a = {};
-//
-//        try {
-//            s = Oblig1.flett(a);  // kaller metoden
-//        } catch (Exception e) {
-//            System.out.println(e);
-//            System.out.println
-//                    ("Oppgave 7b: a) Skal ikke kaste unntak for en tom tabell!");
-//            antallFeil++;
-//        }
-//
-//        if (s.compareTo("") != 0) {
-//            System.out.println
-//                    ("Oppgave 7b: b) Svaret skal bli lik en tom streng!");
-//            antallFeil++;
-//        }
-//
-//        try {
-//            s = Oblig1.flett("", "ABC", "");  // kaller metoden
-//        } catch (Exception e) {
-//            System.out.println(e);
-//            System.out.println
-//                    ("Oppgave 7b: c) Skal ikke kaste unntak for en tom streng!");
-//            antallFeil++;
-//        }
-//
-//        if (s.compareTo("ABC") != 0) {
-//            System.out.println
-//                    ("Oppgave 7b: d) Svaret skal bli lik ABC");
-//            antallFeil++;
-//        }
-//
-//        s = Oblig1.flett("AM ", "L", "GEDS", "ORATKRR", "", "R TRTE", "IO", "TGAUU");
-//
-//        if (s.compareTo("ALGORITMER OG DATASTRUKTURER") != 0) {
-//            System.out.println
-//                    ("Oppgave 7b: e) Svaret skal bli ALGORITMER OG DATASTRUKTURER!");
-//            antallFeil++;
-//        }
-//
-//        s = Oblig1.flett("AFK", "BGLP", "CHMQT", "DINRUW", "EJOSVXY");
-//
-//        if (s.compareTo("ABCDEFGHIJKLMNOPQRSTUVWXY") != 0) {
-//            System.out.println
-//                    ("Oppgave 7b: f) Svaret skal bli ABCDEFGHIJKLMNOPQRSTUVWXY!");
-//            antallFeil++;
-//        }
-//
-//        return antallFeil;
-//    }
+
+    public static int oppgave7() {
+        int antallFeil = 0;
+        String s = null;
+
+        try {
+            s = Oblig1.flett("", "");  // kaller metoden
+        } catch (Exception e) {
+            System.out.println(e);
+            System.out.println
+                    ("Oppgave 7a: a) Skal ikke kaste unntak for to tomme tegnstrenger!!");
+            antallFeil++;
+        }
+
+        if (s.compareTo("") != 0) {
+            System.out.println
+                    ("Oppgave 7a: b) Svaret skal bli lik en tom streng!");
+            antallFeil++;
+        }
+
+        try {
+            s = Oblig1.flett("", "AB");  // kaller metoden
+        } catch (Exception e) {
+            System.out.println(e);
+            System.out.println
+                    ("Oppgave 7a: c) Skal ikke kaste unntak for en tom tegnstreng!!");
+            antallFeil++;
+        }
+
+        if (s.compareTo("AB") != 0) {
+            System.out.println
+                    ("Oppgave 7a: d) Svaret skal bli lik AB");
+            antallFeil++;
+        }
+
+        try {
+            s = Oblig1.flett("AB", "");  // kaller metoden
+        } catch (Exception e) {
+            System.out.println(e);
+            System.out.println
+                    ("Oppgave 7a: e) Skal ikke kaste unntak for en tom tegnstreng!!");
+            antallFeil++;
+        }
+
+        if (s.compareTo("AB") != 0) {
+            System.out.println
+                    ("Oppgave 7a: f) Svaret skal bli lik AB");
+            antallFeil++;
+        }
+
+        s = Oblig1.flett("A", "BCDEF");
+
+        if (s.compareTo("ABCDEF") != 0) {
+            System.out.println
+                    ("Oppgave 7a: g) Svaret skal bli lik ABCDEF");
+            antallFeil++;
+        }
+
+        s = Oblig1.flett("ABCDE", "F");
+
+        if (s.compareTo("AFBCDE") != 0) {
+            System.out.println
+                    ("Oppgave 7a: h) Svaret skal bli lik AFBCDE");
+            antallFeil++;
+        }
+
+        s = Oblig1.flett("ACEGIK", "BDFHJLMN");
+
+        if (s.compareTo("ABCDEFGHIJKLMN") != 0) {
+            System.out.println
+                    ("Oppgave 7a: i) Svaret skal bli lik ABCDEFGHIJKLMN");
+            antallFeil++;
+        }
+
+        String[] a = {};
+
+        try {
+            s = Oblig1.flett(a);  // kaller metoden
+        } catch (Exception e) {
+            System.out.println(e);
+            System.out.println
+                    ("Oppgave 7b: a) Skal ikke kaste unntak for en tom tabell!");
+            antallFeil++;
+        }
+
+        if (s.compareTo("") != 0) {
+            System.out.println
+                    ("Oppgave 7b: b) Svaret skal bli lik en tom streng!");
+            antallFeil++;
+        }
+
+        try {
+            s = Oblig1.flett("", "ABC", "");  // kaller metoden
+        } catch (Exception e) {
+            System.out.println(e);
+            System.out.println
+                    ("Oppgave 7b: c) Skal ikke kaste unntak for en tom streng!");
+            antallFeil++;
+        }
+
+        if (s.compareTo("ABC") != 0) {
+            System.out.println
+                    ("Oppgave 7b: d) Svaret skal bli lik ABC");
+            antallFeil++;
+        }
+
+        s = Oblig1.flett("AM ", "L", "GEDS", "ORATKRR", "", "R TRTE", "IO", "TGAUU");
+
+        if (s.compareTo("ALGORITMER OG DATASTRUKTURER") != 0) {
+            System.out.println
+                    ("Oppgave 7b: e) Svaret skal bli ALGORITMER OG DATASTRUKTURER!");
+            antallFeil++;
+        }
+
+        s = Oblig1.flett("AFK", "BGLP", "CHMQT", "DINRUW", "EJOSVXY");
+
+        if (s.compareTo("ABCDEFGHIJKLMNOPQRSTUVWXY") != 0) {
+            System.out.println
+                    ("Oppgave 7b: f) Svaret skal bli ABCDEFGHIJKLMNOPQRSTUVWXY!");
+            antallFeil++;
+        }
+
+        return antallFeil;
+    }
 //
 //    ///// Oppgave 8 //////////////////////////////////////
 //
@@ -823,137 +823,137 @@ public class Oblig1Test {
 //
 //    ///// Oppgave 10 //////////////////////////////////////
 //
-//    public static int oppgave10() {
-//        int antallFeil = 0;
-//        boolean b = false;
-//
-//        try {
-//            b = Oblig1.inneholdt("", "");  // kaller metoden
-//        } catch (Exception e) {
-//            System.out.println(e);
-//            System.out.println
-//                    ("Oppgave 10: a) Skal ikke kaste unntak for to tomme ord!!");
-//            antallFeil++;
-//        }
-//
-//        if (b != true) {
-//            System.out.println
-//                    ("Oppgave 10: b) Svaret skal bli lik true her!");
-//            antallFeil++;
-//        }
-//
-//        try {
-//            b = Oblig1.inneholdt("", "A");  // kaller metoden
-//        } catch (Exception e) {
-//            System.out.println(e);
-//            System.out.println
-//                    ("Oppgave 10: c) Skal ikke kaste unntak for et tomt ord!!");
-//            antallFeil++;
-//        }
-//
-//        if (b != true) {
-//            System.out.println
-//                    ("Oppgave 10: d) Svaret skal bli lik true her!");
-//            antallFeil++;
-//        }
-//
-//        try {
-//            b = Oblig1.inneholdt("A", "");  // kaller metoden
-//        } catch (Exception e) {
-//            System.out.println(e);
-//            System.out.println
-//                    ("Oppgave 10: e) Skal ikke kaste unntak for et tomt ord!!");
-//            antallFeil++;
-//        }
-//
-//        if (b != false) {
-//            System.out.println
-//                    ("Oppgave 10: f) Svaret skal bli lik false her!");
-//            antallFeil++;
-//        }
-//
-//        b = Oblig1.inneholdt("ABBA", "ABBA");
-//        if (b != true) {
-//            System.out.println
-//                    ("Oppgave 10: g) Svaret skal bli lik true her!");
-//            antallFeil++;
-//        }
-//
-//        b = Oblig1.inneholdt("XYYX", "AAAAAAAYXXY");
-//        if (b != true) {
-//            System.out.println
-//                    ("Oppgave 10: h) Svaret skal bli lik true her!");
-//            antallFeil++;
-//        }
-//
-//        b = Oblig1.inneholdt("ABBA", "RABARBRA");
-//        if (b != true) {
-//            System.out.println
-//                    ("Oppgave 10: i) Svaret skal bli lik true her!");
-//            antallFeil++;
-//        }
-//
-//        b = Oblig1.inneholdt("ABBA", "BARBERER");
-//        if (b != false) {
-//            System.out.println
-//                    ("Oppgave 10: j) Svaret skal bli lik false her!");
-//            antallFeil++;
-//        }
-//
-//        b = Oblig1.inneholdt("ABBA", "AKROBAT");
-//        if (b != false) {
-//            System.out.println
-//                    ("Oppgave 10: k) Svaret skal bli lik false her!");
-//            antallFeil++;
-//        }
-//
-//        b = Oblig1.inneholdt("ØÅÅØ", "ØØÅØØ");
-//        if (b != false) {
-//            System.out.println
-//                    ("Oppgave 10: l) Svaret skal bli lik false her!");
-//            antallFeil++;
-//        }
-//
-//        b = Oblig1.inneholdt("ØÅÅØ", "ÅØØÅØ");
-//        if (b == false) {
-//            System.out.println
-//                    ("Oppgave 10: m) Svaret skal bli lik true her!");
-//            antallFeil++;
-//        }
-//
-//        char[] x = new char[100000];
-//        for (int i = 0; i < 50000; i++) {
-//            x[2 * i] = 'X';
-//            x[2 * i + 1] = 'Y';
-//        }
-//        String t = String.copyValueOf(x);
-//
-//        char[] y = new char[100000];
-//        for (int i = 0; i < 49999; i++) {
-//            y[2 * i] = 'X';
-//            y[2 * i + 1] = 'Y';
-//        }
-//        y[99998] = 'Z';
-//        y[99999] = 'Z';
-//        String s = String.copyValueOf(y);
-//
-//        long tid = System.currentTimeMillis();
-//        b = Oblig1.inneholdt(s, t);
-//        tid = System.currentTimeMillis() - tid;
-//
-//        if (tid > 100) {
-//            System.out.println
-//                    ("Oppgave 10: n) Dette (" + tid + " ms) gikk sakte! Finn en bedre algoritme!");
-//            antallFeil++;
-//        }
-//
-//        if (b != false) {
-//            System.out.println
-//                    ("Oppgave 10: o) Svaret skal bli lik false her!");
-//            antallFeil++;
-//        }
-//        return antallFeil;
-//    }
+    public static int oppgave10() {
+        int antallFeil = 0;
+        boolean b = false;
+
+        try {
+            b = Oblig1.inneholdt("", "");  // kaller metoden
+        } catch (Exception e) {
+            System.out.println(e);
+            System.out.println
+                    ("Oppgave 10: a) Skal ikke kaste unntak for to tomme ord!!");
+            antallFeil++;
+        }
+
+        if (b != true) {
+            System.out.println
+                    ("Oppgave 10: b) Svaret skal bli lik true her!");
+            antallFeil++;
+        }
+
+        try {
+            b = Oblig1.inneholdt("", "A");  // kaller metoden
+        } catch (Exception e) {
+            System.out.println(e);
+            System.out.println
+                    ("Oppgave 10: c) Skal ikke kaste unntak for et tomt ord!!");
+            antallFeil++;
+        }
+
+        if (b != true) {
+            System.out.println
+                    ("Oppgave 10: d) Svaret skal bli lik true her!");
+            antallFeil++;
+        }
+
+        try {
+            b = Oblig1.inneholdt("A", "");  // kaller metoden
+        } catch (Exception e) {
+            System.out.println(e);
+            System.out.println
+                    ("Oppgave 10: e) Skal ikke kaste unntak for et tomt ord!!");
+            antallFeil++;
+        }
+
+        if (b != false) {
+            System.out.println
+                    ("Oppgave 10: f) Svaret skal bli lik false her!");
+            antallFeil++;
+        }
+
+        b = Oblig1.inneholdt("ABBA", "ABBA");
+        if (b != true) {
+            System.out.println
+                    ("Oppgave 10: g) Svaret skal bli lik true her!");
+            antallFeil++;
+        }
+
+        b = Oblig1.inneholdt("XYYX", "AAAAAAAYXXY");
+        if (b != true) {
+            System.out.println
+                    ("Oppgave 10: h) Svaret skal bli lik true her!");
+            antallFeil++;
+        }
+
+        b = Oblig1.inneholdt("ABBA", "RABARBRA");
+        if (b != true) {
+            System.out.println
+                    ("Oppgave 10: i) Svaret skal bli lik true her!");
+            antallFeil++;
+        }
+
+        b = Oblig1.inneholdt("ABBA", "BARBERER");
+        if (b != false) {
+            System.out.println
+                    ("Oppgave 10: j) Svaret skal bli lik false her!");
+            antallFeil++;
+        }
+
+        b = Oblig1.inneholdt("ABBA", "AKROBAT");
+        if (b != false) {
+            System.out.println
+                    ("Oppgave 10: k) Svaret skal bli lik false her!");
+            antallFeil++;
+        }
+
+        b = Oblig1.inneholdt("ØÅÅØ", "ØØÅØØ");
+        if (b != false) {
+            System.out.println
+                    ("Oppgave 10: l) Svaret skal bli lik false her!");
+            antallFeil++;
+        }
+
+        b = Oblig1.inneholdt("ØÅÅØ", "ÅØØÅØ");
+        if (b == false) {
+            System.out.println
+                    ("Oppgave 10: m) Svaret skal bli lik true her!");
+            antallFeil++;
+        }
+
+        char[] x = new char[100000];
+        for (int i = 0; i < 50000; i++) {
+            x[2 * i] = 'X';
+            x[2 * i + 1] = 'Y';
+        }
+        String t = String.copyValueOf(x);
+
+        char[] y = new char[100000];
+        for (int i = 0; i < 49999; i++) {
+            y[2 * i] = 'X';
+            y[2 * i + 1] = 'Y';
+        }
+        y[99998] = 'Z';
+        y[99999] = 'Z';
+        String s = String.copyValueOf(y);
+
+        long tid = System.currentTimeMillis();
+        b = Oblig1.inneholdt(s, t);
+        tid = System.currentTimeMillis() - tid;
+
+        if (tid > 100) {
+            System.out.println
+                    ("Oppgave 10: n) Dette (" + tid + " ms) gikk sakte! Finn en bedre algoritme!");
+            antallFeil++;
+        }
+
+        if (b != false) {
+            System.out.println
+                    ("Oppgave 10: o) Svaret skal bli lik false her!");
+            antallFeil++;
+        }
+        return antallFeil;
+    }
 
     ///// Hjelpemetoder /////////////////////////////
 
