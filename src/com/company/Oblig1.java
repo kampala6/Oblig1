@@ -341,6 +341,12 @@ public class  Oblig1 {
         return new int[]{m , nm, tm};
     }
 
+    /**
+     * Oppgave 10 by s929577
+     * @param a
+     * @param b
+     * @return
+     */
     public static boolean inneholdt(String a, String b){
         int[] antallA = new int[29];
         int[] antallB = new int[29];
