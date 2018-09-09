@@ -267,7 +267,10 @@ public class  Oblig1 {
         if( n <= 1) return;
         k %= n;   // k < a.length
 
-        if(k < 0) k += n;  // Vi bruke k som indeks
+        if (k >= 0) {
+        } else {
+            k += n;  // Vi bruke k som indeks
+        }
 
         snu(a, 0 ,n - 1);
         snu(a, 0, k - 1);
