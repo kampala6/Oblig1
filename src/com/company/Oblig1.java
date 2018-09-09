@@ -10,8 +10,17 @@ public class  Oblig1 {
 
     public static void main(String[] args) {
 	// write your code here
+
+        int [] a2 = {6,10,9,4,1,3,8,5,2,7};
+        int [] a3 = {6,10,16,11,7,12,3,9,8,5};
+
+        delsortering(a2);
+
+        System.out.println(Arrays.toString(a2));
         int [] b1 = {3,3,4,5,5,6,7,7,7,8,9,9};
         System.out.println(antallUlikeSortert(b1));
+
+       // System.out.println("Oppgave 8");
 
         char[] c = "ABCDEFGHIJ".toCharArray();
          rotasjon(c);
@@ -48,6 +57,9 @@ public class  Oblig1 {
         System.out.println(Arrays.toString(b));
 
         System.out.println(ombyttinger(b));
+
+        int [] indeks = indekssortering(a3);
+        for (int i = 0; i < a3.length; i++) System.out.print(a3[indeks[i]] + " ");
 
     }
 
@@ -179,6 +191,36 @@ public class  Oblig1 {
     }
 
     /**
+     * Oppgave 4
+     * @param a
+     */
+    public static void delsortering(int[] a){
+        int v = 0, h = a.length - 1;
+        if (!(v >= a.length || (a[v] & 1) == 0)) {
+            do v++;
+            while (v < a.length && (a[v] & 1) != 0);
+        }
+        while (h >= 0 && (a[h] & 1) == 0) h--;
+
+        while (true){
+            if(v < h){
+                bytt(a, v++, h--);
+            }else {
+                break;
+            }
+            while (true) {
+                if ((a[v] & 1) == 0) break; //bitwise operation if number ends in 0 even number
+                v++;
+            }
+            while (true) {
+                if ((a[h] & 1) != 0) break; // if its 1 then its and odd number
+                h--;
+            }
+        }
+        Arrays.sort(a, 0, v);
+        Arrays.sort(a, v, a.length);
+    }
+    /**
      * Oppgave 5
      * @param a
      */
@@ -277,6 +319,28 @@ public class  Oblig1 {
         }return txt.toString();
     }
 
+    public static int[] indekssortering(int[] a){
+        int [] indx = new int[a.length]; // index tabell but with the lenght of a
+
+        for (int i = a.length - 1; i >= 0; i--) {
+            indx[i] = i;
+        }
+
+        int tempindex, j;
+
+        int i = 1;
+        while (i < a.length) {
+            tempindex = indx[i]; j = i - 1;
+            for (; j >= 0 && a[tempindex] < a[indx[j]]; j--) {
+                indx[j + 1] = indx[j];
+            }
+            indx[j + 1] = tempindex;
+            i++;
+        }
+
+        return indx;
+    }
+
     /**
      * HjelpMethod
      * @param a
@@ -303,7 +367,7 @@ public class  Oblig1 {
         return min(a, 0, a.length);
     }
 
-    public static int[] tredjeMin(int[] a){
+    public static int[] tredjeMin1(int[] a){
         int n = a.length;
         if(n < 3){
             throw new java.util.NoSuchElementException("a.lenght(" + n + ") < 2!");
@@ -340,6 +404,14 @@ public class  Oblig1 {
         }
         return new int[]{m , nm, tm};
     }
+
+//    public static int[] tredjeMin(int[] a){
+//        int n = a.length;
+//
+//        if(n < 3){
+//            throw new NoSuchElementException("a.lenght(" + n + ") < 2!");
+//        }
+//    }
 
     /**
      * Oppgave 10 by s929577
