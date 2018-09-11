@@ -9,60 +9,6 @@ import java.util.Random;
 
 public class  Oblig1 {
 
-    public static void main(String[] args) {
-	// write your code here
-
-        int [] a2 = {6,10,9,4,1,3,8,5,2,7};
-        int [] a3 = {6,10,16,11,7,12,3,9,8,5};
-
-        delsortering(a2);
-
-        System.out.println(Arrays.toString(a2));
-        int [] b1 = {3,3,4,5,5,6,7,7,7,8,9,9};
-        System.out.println(antallUlikeSortert(b1));
-
-       // System.out.println("Oppgave 8");
-
-        char[] c = "ABCDEFGHIJ".toCharArray();
-         rotasjon(c);
-
-        System.out.println(Arrays.toString(c));
-
-//        rotasjon1(c);
-//        System.out.println(Arrays.toString(c));
-
-        char[] a = {'A','B','C','D','E','F','G','H','I','J'};
-
-        System.out.println(Arrays.toString(a));
-
-        rotasjon(a,3);
-        System.out.println(Arrays.toString(a));
-
-        rotasjon(a,-2);
-        System.out.println(Arrays.toString(a));
-
-
-        String a1 = flett("ABC", "DEFGH");
-
-        String b2 = flett("IJKLMN", "OPQ");
-
-        System.out.println(a1 + " " + b2);
-
-
-        int [] b = randPerm(3);
-
-        System.out.println(Arrays.toString(b));
-
-        System.out.println(maks(b));
-
-        System.out.println(Arrays.toString(b));
-
-        System.out.println(ombyttinger(b));
-
-        int [] indeks = indekssortering(a3);
-        for (int i = 0; i < a3.length; i++) System.out.print(a3[indeks[i]] + " ");
-
-    }
 
     public static void bytt(int[] a, int i, int j){
         int temp = a[i];
@@ -277,7 +223,7 @@ public class  Oblig1 {
         snu(a, 0, k - 1);
         snu(a,  k, n -1);
 
-    }
+    }//end of rotasjon
 
     /**
      * Oppgvae 7
@@ -372,47 +318,15 @@ public class  Oblig1 {
         }return m;
     }//end min
 
+    /**
+     * HjelpMethod
+     * @param a
+     * @return
+     */
     public static int min(int[] a){
         return min(a, 0, a.length);
     }//end min
 
-    public static int[] tredjeMin1(int[] a){
-        int n = a.length;
-        if(n < 3){
-            throw new java.util.NoSuchElementException("a.lenght(" + n + ") < 2!");
-        }
-
-        int m = min(a); // m er posisjonen til tabellens minste verdi
-        int nm;
-
-        int tm = 0;
-
-        if(m == 0){  // den minste ligger først
-            nm = min(a, 1, n);  // leter i a[1:n>
-        }else if(m == n -1){ // den minste liger bakerst
-            nm = min(a, 0, n - 1); //leter i a[0: n -1]
-        }else{
-            int mv = min(a, 0 , m); //leter i a[0:m
-            int mh = min(a, m + 1, n); //leter i a[m+1:n>
-
-            nm = a[mh] > a[mv] ? mv : mh; // hvem er minst
-        }
-
-        if(nm < m){
-            int vnm = min(a, 0, nm);
-            int nmM = min(a, nm + 1, m);
-            int mth = min(a, m + 1, n);
-
-            if(a[vnm] < a[nmM] && a[vnm] < a[mth]){
-                tm = vnm;
-            }else if(a[nmM] < a[vnm] && a[nmM] < a[mth]){
-                tm = nmM;
-            }else if(a[mth] < a[vnm] && a[mth] < a[nmM]){
-                tm = mth;
-            }
-        }
-        return new int[]{m , nm, tm};
-    }
 
     /**
      * Oppgave 9
@@ -459,7 +373,7 @@ public class  Oblig1 {
                 }
             }
         }return new int[] {minv, nestMin, tredjeMin};
-    }
+    }//end of tredjeMin
 
 //    public static int[] tredjeMin(int[] a){
 //        int n = a.length;
