@@ -13,7 +13,7 @@ kommentartegnet foran metodekallet tas vekk. Testprogrammet må gi 0 feil før
 Oblig 1 sendes inn!
 */
 
-///// Oppdatert 9. september 2018 ///////////////
+///// Oppdatert 9. september 2018 /////////////// guled
 
 import com.company.Oblig1;
 
