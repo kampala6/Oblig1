@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.NoSuchElementException;
 import java.util.Random;
 
+
 public class  Oblig1 {
 
     public static void main(String[] args) {
@@ -320,7 +321,7 @@ public class  Oblig1 {
                 }
             }i++;
         }return txt.toString();
-    }
+    }//end flett
 
     public static int[] indekssortering(int[] a){
         int [] indx = new int[a.length]; // index tabell but with the lenght of a
@@ -342,7 +343,7 @@ public class  Oblig1 {
         }
 
         return indx;
-    }
+    }//end indekssortering
 
     /**
      * HjelpMethod
@@ -364,11 +365,11 @@ public class  Oblig1 {
                 minverdi = a[m];
             }
         }return m;
-    }
+    }//end min
 
     public static int min(int[] a){
         return min(a, 0, a.length);
-    }
+    }//end min
 
     public static int[] tredjeMin1(int[] a){
         int n = a.length;
@@ -459,5 +460,5 @@ public class  Oblig1 {
             }
         }
         return true;
-    }
+    }//end innholdt
 }
