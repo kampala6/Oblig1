@@ -461,4 +461,4 @@ public class  Oblig1 {
         }
         return true;
     }//end innholdt
-}
+}//end of oblig1
