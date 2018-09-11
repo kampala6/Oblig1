@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d25326f0-985e-493d-998f-f4851aa87d0f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Oblig1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Oblig1.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,27 +31,27 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="6" />
-          <entry key="java" value="3233" />
+          <entry key="java" value="3234" />
           <entry key="txt" value="15" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3233" />
+          <entry key="JAVA" value="3234" />
           <entry key="PLAIN_TEXT" value="21" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="11" />
-          <entry key="project.open.time.0" value="4" />
+          <entry key="project.closed" value="13" />
+          <entry key="project.open.time.0" value="5" />
           <entry key="project.open.time.1" value="4" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="11" />
+          <entry key="project.opened" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.new.test" />
@@ -70,11 +69,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Oblig1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="604">
-              <caret line="463" column="16" selection-start-line="463" selection-start-column="16" selection-end-line="463" selection-end-column="16" />
-              <folding>
-                <element signature="e#596#634#1" expanded="true" />
-              </folding>
+            <state relative-caret-position="374">
+              <caret line="464" selection-start-line="464" selection-end-line="464" />
             </state>
           </provider>
         </entry>
@@ -586,7 +582,7 @@
         <observation name="cancelled" value="3.0" />
       </dailyData>
       <dailyData date="11-09-2018">
-        <observation name="cancelled" value="67.0" />
+        <observation name="cancelled" value="68.0" />
       </dailyData>
     </factor>
     <factor id="completionType">
@@ -629,7 +625,7 @@
         <observation name="count" value="3.0" />
       </dailyData>
       <dailyData date="11-09-2018">
-        <observation name="count" value="67.0" />
+        <observation name="count" value="68.0" />
       </dailyData>
     </factor>
     <factor id="doubleFeature:explicitProximity">
@@ -1482,8 +1478,8 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -1579,7 +1575,8 @@
       <workItem from="1536576321373" duration="191000" />
       <workItem from="1536650228644" duration="3873000" />
       <workItem from="1536661211609" duration="34000" />
-      <workItem from="1536664374426" duration="163000" />
+      <workItem from="1536664374426" duration="451000" />
+      <workItem from="1536667294296" duration="76000" />
     </task>
     <task id="LOCAL-00001" summary="fixed some bugs">
       <created>1536512957686</created>
@@ -1592,13 +1589,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40119000" />
+    <option name="totallyTimeSpent" value="40483000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="132" y="22" width="983" height="878" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2794899" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2848034" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -1615,7 +1611,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.33673468" />
       <window_info anchor="bottom" id="RNConsole" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32270408" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32241154" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32627118" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -1724,11 +1720,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Oblig1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
-          <caret line="463" column="16" selection-start-line="463" selection-start-column="16" selection-end-line="463" selection-end-column="16" />
-          <folding>
-            <element signature="e#596#634#1" expanded="true" />
-          </folding>
+        <state relative-caret-position="374">
+          <caret line="464" selection-start-line="464" selection-end-line="464" />
         </state>
       </provider>
     </entry>
