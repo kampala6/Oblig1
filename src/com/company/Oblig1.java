@@ -323,6 +323,11 @@ public class  Oblig1 {
         }return txt.toString();
     }//end flett
 
+    /**
+     *
+     * @param a
+     * @return
+     */
     public static int[] indekssortering(int[] a){
         int [] indx = new int[a.length]; // index tabell but with the lenght of a
 
@@ -409,10 +414,16 @@ public class  Oblig1 {
         return new int[]{m , nm, tm};
     }
 
+    /**
+     * Oppgave 9
+     * Kodert av
+     * @param a
+     * @return
+     */
     public static int[] tredjeMin(int[] a){
         if(a.length < 3) throw new NoSuchElementException("Verdi ellet innholdt er mindre en !3");
 
-        int[] indx = indekssortering(Arrays.copyOf(a,3));
+        int[] indx = indekssortering(Arrays.copyOf(a,3));  //Sorterting av index på riktige plass
 
         int minv = indx[0];
         int nestMin = indx[1];
@@ -431,7 +442,7 @@ public class  Oblig1 {
                         tredjeMinverdi = nestMinVerdi;
 
                         nestMin = minv;
-                        nestMinVerdi = minVerdi;
+                        nestMinVerdi = minVerdi;    //opptatering
 
                         minv = i;
                         minVerdi = hjempVerdiMin;
