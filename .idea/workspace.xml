@@ -31,14 +31,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="6" />
-          <entry key="java" value="3808" />
+          <entry key="java" value="3849" />
           <entry key="txt" value="33" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3808" />
+          <entry key="JAVA" value="3849" />
           <entry key="PLAIN_TEXT" value="39" />
           <entry key="XML" value="1" />
         </counts>
@@ -70,22 +70,24 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Oblig1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="418" column="17" lean-forward="true" selection-start-line="418" selection-start-column="17" selection-end-line="418" selection-end-column="17" />
+            <state relative-caret-position="96">
+              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
               <folding>
                 <element signature="e#8428#8460#0" expanded="true" />
-                <element signature="e#8511#8587#0" expanded="true" />
+                <element signature="e#7213#7289#0" expanded="true" />
                 <element signature="e#8516#8537#1" expanded="true" />
-                <element signature="e#8511#8587#0" expanded="true" />
+                <element signature="e#7213#7289#0" expanded="true" />
                 <element signature="e#8624#8634#1" expanded="true" />
-                <element signature="e#8643#8889#0" expanded="true" />
-                <element signature="e#8643#8889#0" expanded="true" />
-                <element signature="e#8722#8825#0" expanded="true" />
-                <element signature="e#8722#8825#0" expanded="true" />
-                <element signature="e#10839#10929#0" expanded="true" />
-                <element signature="e#10839#10929#0" expanded="true" />
-                <element signature="e#10839#10929#0" expanded="true" />
-                <element signature="e#10839#10929#0" expanded="true" />
+                <element signature="e#7345#7591#0" expanded="true" />
+                <element signature="e#7345#7591#0" expanded="true" />
+                <element signature="e#7424#7527#0" expanded="true" />
+                <element signature="e#7424#7527#0" expanded="true" />
+                <element signature="e#9551#9552#0" expanded="true" />
+                <element signature="e#9593#9594#0" expanded="true" />
+                <element signature="e#8453#8543#0" expanded="true" />
+                <element signature="e#8453#8543#0" expanded="true" />
+                <element signature="e#8453#8543#0" expanded="true" />
+                <element signature="e#8453#8543#0" expanded="true" />
                 <element signature="e#10857#10906#0" expanded="true" />
                 <element signature="e#10956#10975#1" expanded="true" />
                 <element signature="e#10988#11010#1" expanded="true" />
@@ -93,19 +95,19 @@
                 <element signature="e#11053#11076#1" expanded="true" />
                 <element signature="e#11085#11115#1" expanded="true" />
                 <element signature="e#11124#11158#1" expanded="true" />
-                <element signature="e#11246#12155#0" expanded="true" />
+                <element signature="e#8860#9769#0" expanded="true" />
                 <element signature="e#11173#11183#1" expanded="true" />
-                <element signature="e#11246#12155#0" expanded="true" />
-                <element signature="e#11246#12155#0" expanded="true" />
-                <element signature="e#11246#12155#0" expanded="true" />
-                <element signature="e#11246#12155#0" expanded="true" />
+                <element signature="e#8860#9769#0" expanded="true" />
+                <element signature="e#8860#9769#0" expanded="true" />
+                <element signature="e#8860#9769#0" expanded="true" />
+                <element signature="e#8860#9769#0" expanded="true" />
                 <element signature="e#11217#11242#1" expanded="true" />
-                <element signature="e#12162#12198#0" expanded="true" />
-                <element signature="e#12162#12198#0" expanded="true" />
-                <element signature="e#12699#12710#0" expanded="true" />
-                <element signature="e#12699#12710#0" expanded="true" />
-                <element signature="e#13038#13049#0" expanded="true" />
-                <element signature="e#13038#13049#0" expanded="true" />
+                <element signature="e#9776#9812#0" expanded="true" />
+                <element signature="e#9776#9812#0" expanded="true" />
+                <element signature="e#10331#10342#0" expanded="true" />
+                <element signature="e#10331#10342#0" expanded="true" />
+                <element signature="e#10670#10681#0" expanded="true" />
+                <element signature="e#10670#10681#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -750,7 +752,7 @@
         <observation name="cancelled" value="3.0" />
       </dailyData>
       <dailyData date="11-09-2018">
-        <observation name="cancelled" value="289.0" />
+        <observation name="cancelled" value="318.0" />
         <observation name="explicitSelect" value="54.0" />
         <observation name="typedSelect" value="48.0" />
       </dailyData>
@@ -795,7 +797,7 @@
         <observation name="count" value="3.0" />
       </dailyData>
       <dailyData date="11-09-2018">
-        <observation name="count" value="391.0" />
+        <observation name="count" value="420.0" />
       </dailyData>
     </factor>
     <factor id="doubleFeature:explicitProximity">
@@ -1840,7 +1842,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536672688018" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536673163893" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -1916,7 +1918,7 @@
       <workItem from="1536661211609" duration="34000" />
       <workItem from="1536664374426" duration="451000" />
       <workItem from="1536667294296" duration="76000" />
-      <workItem from="1536671272715" duration="1575000" />
+      <workItem from="1536671272715" duration="1786000" />
     </task>
     <task id="LOCAL-00001" summary="fixed some bugs">
       <created>1536512957686</created>
@@ -1950,7 +1952,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42058000" />
+    <option name="totallyTimeSpent" value="42269000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="132" y="22" width="983" height="878" extended-state="0" />
@@ -1970,10 +1972,10 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3355177" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.3355177" />
       <window_info anchor="bottom" id="RNConsole" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32241154" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32241154" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32627118" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -2152,22 +2154,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Oblig1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="418" column="17" lean-forward="true" selection-start-line="418" selection-start-column="17" selection-end-line="418" selection-end-column="17" />
+        <state relative-caret-position="96">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
           <folding>
             <element signature="e#8428#8460#0" expanded="true" />
-            <element signature="e#8511#8587#0" expanded="true" />
+            <element signature="e#7213#7289#0" expanded="true" />
             <element signature="e#8516#8537#1" expanded="true" />
-            <element signature="e#8511#8587#0" expanded="true" />
+            <element signature="e#7213#7289#0" expanded="true" />
             <element signature="e#8624#8634#1" expanded="true" />
-            <element signature="e#8643#8889#0" expanded="true" />
-            <element signature="e#8643#8889#0" expanded="true" />
-            <element signature="e#8722#8825#0" expanded="true" />
-            <element signature="e#8722#8825#0" expanded="true" />
-            <element signature="e#10839#10929#0" expanded="true" />
-            <element signature="e#10839#10929#0" expanded="true" />
-            <element signature="e#10839#10929#0" expanded="true" />
-            <element signature="e#10839#10929#0" expanded="true" />
+            <element signature="e#7345#7591#0" expanded="true" />
+            <element signature="e#7345#7591#0" expanded="true" />
+            <element signature="e#7424#7527#0" expanded="true" />
+            <element signature="e#7424#7527#0" expanded="true" />
+            <element signature="e#9551#9552#0" expanded="true" />
+            <element signature="e#9593#9594#0" expanded="true" />
+            <element signature="e#8453#8543#0" expanded="true" />
+            <element signature="e#8453#8543#0" expanded="true" />
+            <element signature="e#8453#8543#0" expanded="true" />
+            <element signature="e#8453#8543#0" expanded="true" />
             <element signature="e#10857#10906#0" expanded="true" />
             <element signature="e#10956#10975#1" expanded="true" />
             <element signature="e#10988#11010#1" expanded="true" />
@@ -2175,19 +2179,19 @@
             <element signature="e#11053#11076#1" expanded="true" />
             <element signature="e#11085#11115#1" expanded="true" />
             <element signature="e#11124#11158#1" expanded="true" />
-            <element signature="e#11246#12155#0" expanded="true" />
+            <element signature="e#8860#9769#0" expanded="true" />
             <element signature="e#11173#11183#1" expanded="true" />
-            <element signature="e#11246#12155#0" expanded="true" />
-            <element signature="e#11246#12155#0" expanded="true" />
-            <element signature="e#11246#12155#0" expanded="true" />
-            <element signature="e#11246#12155#0" expanded="true" />
+            <element signature="e#8860#9769#0" expanded="true" />
+            <element signature="e#8860#9769#0" expanded="true" />
+            <element signature="e#8860#9769#0" expanded="true" />
+            <element signature="e#8860#9769#0" expanded="true" />
             <element signature="e#11217#11242#1" expanded="true" />
-            <element signature="e#12162#12198#0" expanded="true" />
-            <element signature="e#12162#12198#0" expanded="true" />
-            <element signature="e#12699#12710#0" expanded="true" />
-            <element signature="e#12699#12710#0" expanded="true" />
-            <element signature="e#13038#13049#0" expanded="true" />
-            <element signature="e#13038#13049#0" expanded="true" />
+            <element signature="e#9776#9812#0" expanded="true" />
+            <element signature="e#9776#9812#0" expanded="true" />
+            <element signature="e#10331#10342#0" expanded="true" />
+            <element signature="e#10331#10342#0" expanded="true" />
+            <element signature="e#10670#10681#0" expanded="true" />
+            <element signature="e#10670#10681#0" expanded="true" />
           </folding>
         </state>
       </provider>

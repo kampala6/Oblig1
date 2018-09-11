@@ -21,23 +21,6 @@ public class  Oblig1 {
         a[i] = a[j];
         a[j] = temp;
     }
-    /**
-     * Method to produce random array values
-     * This is to produce a given number
-     * HjelperMethod(This method is from the school konpendium)
-     * @return
-     */
-    public static int[] randPerm(int n){
-        Random r = new Random();
-        int[] a = new int[n];
-
-        Arrays.setAll(a, i -> i + 1);
-
-        for (int k = n - 1; k > 0 ; k--) {
-            int i = r.nextInt(k + 1);
-            bytt(a,k,i);
-        }return a;
-    }
 
     /**
      * HejperMethoder
