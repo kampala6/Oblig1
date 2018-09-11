@@ -731,95 +731,95 @@ public class Oblig1Test {
     }
 //
 //    ///// Oppgave 9 //////////////////////////////////////
-//
-//    public static int oppgave9() {
-//        int antallFeil = 0;
-//
-//        boolean unntak = false;
-//        int[] test = {1, 2};
-//        try {
-//            Oblig1.tredjeMin(test);  // kaller metoden
-//        } catch (Exception e) {
-//            unntak = true;
-//            if (!(e instanceof NoSuchElementException)) {
-//                System.out.println("Opgave 9: a) Feil unntak!");
-//                antallFeil++;
-//            }
-//        }
-//
-//        if (!unntak) {
-//            System.out.println
-//                    ("Opgave 9: b) Det skal kastes unntak for tabeller med for få verdier!");
-//            antallFeil++;
-//        }
-//
-//        int[] tabell = new int[]{1, 2, 3};
-//        boolean flere1 = true;
-//
-//        while (flere1) {
-//            int[] c = Oblig1.tredjeMin(tabell);
-//
-//            if (tabell[c[0]] != 1 || tabell[c[1]] != 2 || tabell[c[2]] != 3) {
-//                System.out.println("Oppgave 9: c) Feil for " + Arrays.toString(tabell));
-//                antallFeil++;
-//                break;
-//            }
-//            flere1 = nestePermutasjon(tabell);
-//        }
-//
-//        int[] b = randPerm(10);
-//        int[] d = Oblig1.tredjeMin(b);
-//
-//        if (b[d[0]] != 1 || b[d[1]] != 2 || b[d[2]] != 3) {
-//            System.out.println("Oppgave 9: d) Feil for " + Arrays.toString(b));
-//            antallFeil++;
-//        }
-//
-//        int[] x = {6, 3, 9, 1, 10, 5, 2, 8, 4, 7};
-//        int[] y = x.clone();
-//        Oblig1.tredjeMin(x);
-//
-//        if (!Arrays.equals(x, y)) {
-//            System.out.println
-//                    ("Oppgave 9: e) Metoden gjør endringer i tabellen!");
-//            System.out.println("Tabellen før: " + Arrays.toString(y));
-//            System.out.println("Tabellen etter: " + Arrays.toString(x));
-//            antallFeil++;
-//        }
-//
-//        int[] a = {1, 2, 3, 4, 5, 6};
-//        boolean flere2 = true;
-//
-//        while (flere2) {
-//            int[] c = Oblig1.tredjeMin(a);
-//
-//            int m = c[0];
-//            int nm = c[1];
-//            int tm = c[2];
-//
-//            if (a[m] != 1 || a[nm] != 2 || a[tm] != 3) {
-//                System.out.println("Oppgave 9: f) Feil for " + Arrays.toString(a));
-//                antallFeil++;
-//                break;
-//            }
-//
-//            flere2 = nestePermutasjon(a);
-//        }
-//
-//        a = randPerm(100_000);
-//        long tid = System.currentTimeMillis();
-//        Oblig1.tredjeMin(a);
-//        tid = System.currentTimeMillis() - tid;
-//
-//
-//        if (tid > 100) {
-//            System.out.println("Oppgave 9: g) Metoden er ineffektiv! Bruker du");
-//            System.out.println("metoden indekssortering på hele tabellen?");
-//            antallFeil++;
-//        }
-//
-//        return antallFeil;
-//    }
+
+    public static int oppgave9() {
+        int antallFeil = 0;
+
+        boolean unntak = false;
+        int[] test = {1, 2};
+        try {
+            Oblig1.tredjeMin(test);  // kaller metoden
+        } catch (Exception e) {
+            unntak = true;
+            if (!(e instanceof NoSuchElementException)) {
+                System.out.println("Opgave 9: a) Feil unntak!");
+                antallFeil++;
+            }
+        }
+
+        if (!unntak) {
+            System.out.println
+                    ("Opgave 9: b) Det skal kastes unntak for tabeller med for få verdier!");
+            antallFeil++;
+        }
+
+        int[] tabell = new int[]{1, 2, 3};
+        boolean flere1 = true;
+
+        while (flere1) {
+            int[] c = Oblig1.tredjeMin(tabell);
+
+            if (tabell[c[0]] != 1 || tabell[c[1]] != 2 || tabell[c[2]] != 3) {
+                System.out.println("Oppgave 9: c) Feil for " + Arrays.toString(tabell));
+                antallFeil++;
+                break;
+            }
+            flere1 = nestePermutasjon(tabell);
+        }
+
+        int[] b = randPerm(10);
+        int[] d = Oblig1.tredjeMin(b);
+
+        if (b[d[0]] != 1 || b[d[1]] != 2 || b[d[2]] != 3) {
+            System.out.println("Oppgave 9: d) Feil for " + Arrays.toString(b));
+            antallFeil++;
+        }
+
+        int[] x = {6, 3, 9, 1, 10, 5, 2, 8, 4, 7};
+        int[] y = x.clone();
+        Oblig1.tredjeMin(x);
+
+        if (!Arrays.equals(x, y)) {
+            System.out.println
+                    ("Oppgave 9: e) Metoden gjør endringer i tabellen!");
+            System.out.println("Tabellen før: " + Arrays.toString(y));
+            System.out.println("Tabellen etter: " + Arrays.toString(x));
+            antallFeil++;
+        }
+
+        int[] a = {1, 2, 3, 4, 5, 6};
+        boolean flere2 = true;
+
+        while (flere2) {
+            int[] c = Oblig1.tredjeMin(a);
+
+            int m = c[0];
+            int nm = c[1];
+            int tm = c[2];
+
+            if (a[m] != 1 || a[nm] != 2 || a[tm] != 3) {
+                System.out.println("Oppgave 9: f) Feil for " + Arrays.toString(a));
+                antallFeil++;
+                break;
+            }
+
+            flere2 = nestePermutasjon(a);
+        }
+
+        a = randPerm(100_000);
+        long tid = System.currentTimeMillis();
+        Oblig1.tredjeMin(a);
+        tid = System.currentTimeMillis() - tid;
+
+
+        if (tid > 100) {
+            System.out.println("Oppgave 9: g) Metoden er ineffektiv! Bruker du");
+            System.out.println("metoden indekssortering på hele tabellen?");
+            antallFeil++;
+        }
+
+        return antallFeil;
+    }
 //
 //    ///// Oppgave 10 //////////////////////////////////////
 //

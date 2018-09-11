@@ -409,6 +409,47 @@ public class  Oblig1 {
         return new int[]{m , nm, tm};
     }
 
+    public static int[] tredjeMin(int[] a){
+        if(a.length < 3) throw new NoSuchElementException("Verdi ellet innholdt er mindre en !3");
+
+        int[] indx = indekssortering(Arrays.copyOf(a,3));
+
+        int minv = indx[0];
+        int nestMin = indx[1];
+        int tredjeMin = indx[2];
+
+        int minVerdi = a[minv];
+        int nestMinVerdi = a[nestMin];
+        int tredjeMinverdi = a[tredjeMin];
+
+        for (int i = 3; i < a.length; i++) {
+            int hjempVerdiMin = a[i];
+            if (hjempVerdiMin < tredjeMinverdi){
+                if(hjempVerdiMin < nestMinVerdi){
+                    if(hjempVerdiMin < minVerdi){
+                        tredjeMin = nestMin;
+                        tredjeMinverdi = nestMinVerdi;
+
+                        nestMin = minv;
+                        nestMinVerdi = minVerdi;
+
+                        minv = i;
+                        minVerdi = hjempVerdiMin;
+                    }else {
+                        tredjeMin = nestMin;
+                        tredjeMinverdi = nestMinVerdi;
+
+                        nestMin = i;
+                        nestMinVerdi = hjempVerdiMin;
+                    }
+                }else{
+                    tredjeMin = i;
+                    tredjeMinverdi = hjempVerdiMin;
+                }
+            }
+        }return new int[] {minv, nestMin, tredjeMin};
+    }
+
 //    public static int[] tredjeMin(int[] a){
 //        int n = a.length;
 //
