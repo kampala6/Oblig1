@@ -2,66 +2,18 @@ package com.company;
 
 import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 
+/**
+ * Guled Shuriye Abdullahi s309735
+ * Lunga majola s929577
+ */
 import java.util.Arrays;
 import java.util.NoSuchElementException;
 import java.util.Random;
 
 public class  Oblig1 {
 
-    public static void main(String[] args) {
-	// write your code here
-
-        int [] a2 = {6,10,9,4,1,3,8,5,2,7};
-        int [] a3 = {6,10,16,11,7,12,3,9,8,5};
-
-        delsortering(a2);
-
-        System.out.println(Arrays.toString(a2));
-        int [] b1 = {3,3,4,5,5,6,7,7,7,8,9,9};
-        System.out.println(antallUlikeSortert(b1));
-
-       // System.out.println("Oppgave 8");
-
-        char[] c = "ABCDEFGHIJ".toCharArray();
-         rotasjon(c);
-
-        System.out.println(Arrays.toString(c));
-
-//        rotasjon1(c);
-//        System.out.println(Arrays.toString(c));
-
-        char[] a = {'A','B','C','D','E','F','G','H','I','J'};
-
-        System.out.println(Arrays.toString(a));
-
-        rotasjon(a,3);
-        System.out.println(Arrays.toString(a));
-
-        rotasjon(a,-2);
-        System.out.println(Arrays.toString(a));
 
 
-        String a1 = flett("ABC", "DEFGH");
-
-        String b2 = flett("IJKLMN", "OPQ");
-
-        System.out.println(a1 + " " + b2);
-
-
-        int [] b = randPerm(3);
-
-        System.out.println(Arrays.toString(b));
-
-        System.out.println(maks(b));
-
-        System.out.println(Arrays.toString(b));
-
-        System.out.println(ombyttinger(b));
-
-        int [] indeks = indekssortering(a3);
-        for (int i = 0; i < a3.length; i++) System.out.print(a3[indeks[i]] + " ");
-
-    }
 
     public static void bytt(int[] a, int i, int j){
         int temp = a[i];
@@ -345,7 +297,7 @@ public class  Oblig1 {
     }
 
     /**
-     * HjelpMethod
+     * HjelpMethod by s309735
      * @param a
      * @param fra
      * @param til
@@ -459,5 +411,63 @@ public class  Oblig1 {
             }
         }
         return true;
+    }
+    public static int[] tredjeMin(int[] a)
+    {
+        int n = a.length;
+
+        if (n < 3)
+        {
+            throw new NoSuchElementException("a.length(" + n + ") < 3!");
+        }
+
+        int[] indeks = indekssortering(Arrays.copyOf(a,3));
+
+        int m =  indeks[0];
+        int nm = indeks[1];
+        int tm = indeks[2];
+
+        int minverdi = a[m];         // minste verdi
+        int nestminverdi = a[nm];    // nest minste verdi
+        int tredjeminverdi = a[tm];  // tredje minste verdi
+
+        for (int i = 3; i < n; i++)
+        {
+            int verdi = a[i];
+
+            if (verdi < tredjeminverdi)
+            {
+                if (verdi < nestminverdi)
+                {
+                    if (verdi < minverdi)
+                    {
+                        tm = nm;
+                        tredjeminverdi = nestminverdi;
+
+                        nm = m;
+                        nestminverdi = minverdi;
+
+                        m = i;
+                        minverdi = verdi;
+                    }
+                    else  // verdi < nestminverdi && verdi >= minverdi
+                    {
+                        tm = nm;
+                        tredjeminverdi = nestminverdi;
+
+                        nm = i;
+                        nestminverdi = verdi;
+                    }
+                }
+                else // verdi < tredjeminverdi && verdi >= nestminverdi
+                {
+                    tm = i;
+                    tredjeminverdi = verdi;
+                }
+            }
+
+        } // for
+
+        return new int[] { m, nm, tm };
     }
 }
