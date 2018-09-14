@@ -1,10 +1,17 @@
 package com.company;
+/**
+ * lunga majola s929577
+ * Jibril Yusuf Bile s236311
+ * Guled Shuriye Abdullahi s309735
+ */
 
 import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 
 import java.util.Arrays;
 import java.util.NoSuchElementException;
-import java.util.Random;
+
+
+
 
 
 public class  Oblig1 {
